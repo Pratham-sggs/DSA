@@ -10,6 +10,8 @@ class Solution:
         return dp[i][j]
 
     def predictTheWinner(self, nums: List[int]) -> bool:
+        if len(nums) % 2 == 0:
+            return True
         dp = [[float('inf') for j in range(len(nums))] for i in range(len(nums))]
         res = self.solve(0, len(nums)-1, nums, dp)
         return True if res >=0 else False
