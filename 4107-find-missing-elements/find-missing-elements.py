@@ -11,5 +11,4 @@ class Solution:
         for i in range(smallest, largest+1):
             if i not in numsSet:
                 res.append(i)
-        res.sort()
         return res
